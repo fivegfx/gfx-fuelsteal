@@ -33,7 +33,7 @@ function FillOrSteal(vehicle, fuelType, value, slot)
             Citizen.Wait(100)
             SendNUIMessage({
                 type = "update",
-                value = i,
+                value = vehicleFuel - i,
             })
             if not isDoing then
                 newFuel = i
@@ -48,7 +48,7 @@ function FillOrSteal(vehicle, fuelType, value, slot)
             Citizen.Wait(100)
             SendNUIMessage({
                 type = "update",
-                value = i,
+                value = limit - i,
                 vehicleFuel = vehicleFuel
             })
             if not isDoing then
